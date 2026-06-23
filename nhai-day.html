@@ -111,6 +111,17 @@ body.admin .mentor-card{position:relative;}
 .criteria-table td:nth-child(2){color:var(--gold);font-family:'Be Vietnam Pro',-apple-system,sans-serif;font-weight:800;font-size:15px;white-space:nowrap;}
 .criteria-table td:last-child{color:var(--muted);}
 .prize-section-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mdim);padding:10px 16px 4px;background:rgba(0,0,0,.2);}
+.prize-list{padding:14px 16px 18px;display:flex;flex-direction:column;gap:10px;}
+.prize-list .prize-section-label{background:none;padding:6px 2px 2px;}
+.prize-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:13px 16px;}
+.prize-card-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
+.prize-name{font-weight:700;color:var(--cream);font-size:15px;}
+.prize-val{color:var(--gold);font-weight:800;font-size:15px;white-space:nowrap;}
+.prize-desc{color:var(--muted);font-size:13px;line-height:1.55;margin-top:6px;}
+.share-box{margin-top:14px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:16px 20px;}
+.share-box-title{font-weight:700;color:var(--cream);font-size:13.5px;margin-bottom:10px;}
+.share-box ul{margin:0;padding-left:20px;}
+.share-box li{color:var(--muted);font-size:13px;line-height:1.8;}
 
 /* ANNOUNCE */
 .ann-list{display:flex;flex-direction:column;gap:12px;}
@@ -323,22 +334,24 @@ body.admin{padding-bottom:60px;}
     </div>
     <div class="criteria-wrap">
       <div class="criteria-head" data-e>🏅 Tiêu chí đánh giá</div>
-      <div class="prize-section-label">GIẢI MỖI EVENT</div>
-      <table class="criteria-table">
-        <thead><tr><th>Giải</th><th>Giá trị</th><th>Tiêu chí</th></tr></thead>
-        <tbody>
-          <tr><td>🏆 Master Chef</td><td>2.000.000đ</td><td data-e contenteditable="false">Demo nổi bật, yêu cầu hiểu biết sâu về mặt kỹ thuật, có thể scale là điểm cộng (giải thưởng được xét/2vp)<br><br><b>Lưu ý:</b> Sản phẩm sẽ được check với quản lý team để xác nhận chưa từng được sử dụng trước đó trong sub team hoặc cá nhân người tham dự.</td></tr>
-          <tr><td>🚀 Demo Ready</td><td>1.000.000đ × 8</td><td data-e contenteditable="false">Sản phẩm cần chạy được, demo được và giải quyết một pain point cụ thể trong công việc.<br>Khi chia sẻ, team/cá nhân chỉ cần trình bày ngắn gọn:<br>• <b>Mục đích:</b> dùng để giải quyết việc gì, cho ai/team nào<br>• <b>Tool sử dụng:</b> AI/tool/platform... đã dùng<br>• <b>Cách hoạt động:</b> sản phẩm/workflow chạy như thế nào?<br><br><b>Lưu ý:</b> Sản phẩm sẽ được check với quản lý team để xác nhận chưa từng được sử dụng trước đó trong sub team hoặc cá nhân người tham dự.</td></tr>
-          <tr><td>💡 Best Sharing</td><td>1.000.000đ</td><td data-e contenteditable="false">Case dễ hiểu, truyền cảm hứng (giải thưởng được xét/2vp)</td></tr>
-        </tbody>
-      </table>
-      <div class="prize-section-label">GIẢI TỔNG KẾT CAMPAIGN (T9/2026)</div>
-      <table class="criteria-table">
-        <tbody>
-          <tr><td>🎁 AI Gift</td><td>2.000.000đ × 2</td><td data-e contenteditable="false">Tích điểm: số event tham gia + số lần team có demo.</td></tr>
-          <tr><td>🤝 NHAI Crew</td><td>1.000.000đ × 2</td><td data-e contenteditable="false">Team có nhiều thành viên tham gia nhất xuyên suốt campaign</td></tr>
-        </tbody>
-      </table>
+      <div class="prize-list">
+        <div class="prize-section-label">GIẢI MỖI EVENT</div>
+        <div class="prize-card"><div class="prize-card-top"><span class="prize-name">🏆 Master Chef</span><span class="prize-val">2.000.000đ</span></div><div class="prize-desc" data-e contenteditable="false">Demo nổi bật, hiểu biết sâu về kỹ thuật, chưa từng được sử dụng, có thể scale là điểm cộng. Check với quản lý team đó chưa sử dụng từ trước. Mentor đánh giá.</div></div>
+        <div class="prize-card"><div class="prize-card-top"><span class="prize-name">🚀 Demo Ready (Early Bird)</span><span class="prize-val">1.000.000đ × 8</span></div><div class="prize-desc" data-e contenteditable="false">Sản phẩm chạy được, demo được, giải quyết một pain point cụ thể. Sản phẩm sẽ được check với quản lý team để xác nhận chưa từng được sử dụng trước đó trong team/sub-team.</div></div>
+        <div class="prize-card"><div class="prize-card-top"><span class="prize-name">✅ Hoàn thiện output trước 17:30</span><span class="prize-val">500.000đ</span></div><div class="prize-desc" data-e contenteditable="false">Chỉ cần hoàn thiện output trước 17:30</div></div>
+        <div class="prize-card"><div class="prize-card-top"><span class="prize-name">💡 Best Sharing</span><span class="prize-val">1.000.000đ</span></div><div class="prize-desc" data-e contenteditable="false">Voting sau event</div></div>
+        <div class="prize-section-label">GIẢI TỔNG KẾT CAMPAIGN (TRAO CUỐI T9/2026)</div>
+        <div class="prize-card"><div class="prize-card-top"><span class="prize-name">🎁 AI Gift (Robot AI assistant)</span><span class="prize-val">2.000.000đ × 2</span></div><div class="prize-desc" data-e contenteditable="false">1 HN + 1 HCM. Tích điểm: số event tham gia + số lần trong team có demo. Cao nhất thắng, hòa thì lucky draw.</div></div>
+        <div class="prize-card"><div class="prize-card-top"><span class="prize-name">🤝 Persistent NHAI Crew</span><span class="prize-val">1.000.000đ × 2</span></div><div class="prize-desc" data-e contenteditable="false">1 HN + 1 HCM. Team có nhiều thành viên tham gia event nhất xuyên suốt campaign.</div></div>
+      </div>
+    </div>
+    <div class="share-box">
+      <div class="share-box-title" data-e>Khi chia sẻ, bạn chỉ cần trình bày ngắn gọn:</div>
+      <ul>
+        <li data-e><b>Mục đích:</b> dùng để giải quyết việc gì, cho ai/team nào</li>
+        <li data-e><b>Tool sử dụng:</b> AI/tool/platform đã dùng</li>
+        <li data-e><b>Cách hoạt động:</b> sản phẩm/workflow chạy như thế nào</li>
+      </ul>
     </div>
   </div>
 
@@ -800,7 +813,7 @@ function enableEdit(){
 function saveAll(){
   ss('nd_cases3',cases);ss('nd_anns2',anns);ss('nd_mentors3',mentors);ss('nd_teams',teamCounts);
   const st={};document.querySelectorAll('[data-e]:not([data-mf])').forEach((el,i)=>st['s'+i]=el.innerHTML);
-  ss('nd_statics4',st);
+  ss('nd_statics5',st);
   if(window._heroB64)ss('nd_hero',window._heroB64);
   if(window._rewardB64)ss('nd_reward',window._rewardB64);
   toast('💾 Đã lưu thành công!');
@@ -823,7 +836,7 @@ function exportFile(){
 function restoreSaved(){
   const hero=ls('nd_hero',null);if(hero)document.getElementById('heroImg').src=hero;
   const reward=ls('nd_reward',null);if(reward)document.getElementById('rewardImg').src=reward;
-  const st=ls('nd_statics4',null);
+  const st=ls('nd_statics5',null);
   if(st)document.querySelectorAll('[data-e]:not([data-mf])').forEach((el,i)=>{if(st['s'+i]!=null)el.innerHTML=st['s'+i];});
 }
 
