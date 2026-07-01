@@ -240,6 +240,7 @@ body.admin{padding-bottom:60px;}
 .divider{border:none;border-top:1px solid var(--line);margin:0;}
 
 @media(max-width:660px){
+  body{font-size:16px;}
   nav{padding:10px 14px;}
   .cases-grid{grid-template-columns:1fr;}
   .stats-row{grid-template-columns:1fr 1fr;}
@@ -247,6 +248,14 @@ body.admin{padding-bottom:60px;}
   .hero-dates{flex-wrap:wrap;}
   .page{padding-top:100px;}
   .mentor-grid{grid-template-columns:repeat(2,1fr);}
+  .criteria-table thead{display:none;}
+  .criteria-table,.criteria-table tbody{display:block;width:100%;}
+  .criteria-table tr{display:block;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06);}
+  .criteria-table tr:last-child{border-bottom:none;}
+  .criteria-table td{display:block;padding:0;border:none;white-space:normal!important;}
+  .criteria-table td:first-child{font-size:15.5px;margin-bottom:4px;}
+  .criteria-table td:nth-child(2){font-size:16px;margin-bottom:8px;}
+  .criteria-table td:last-child{font-size:14px;line-height:1.6;}
 }
 </style>
 </head>
